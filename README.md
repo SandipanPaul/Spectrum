@@ -1,2 +1,2 @@
-# spectrum
-spectrum engine
+# Spectrum
+Spectrum engine
