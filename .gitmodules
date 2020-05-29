@@ -1,0 +1,3 @@
+[submodule "Spectrum/vendor/spdlog"]
+	path = Spectrum/vendor/spdlog
+	url = https://github.com/gabime/spdlog
