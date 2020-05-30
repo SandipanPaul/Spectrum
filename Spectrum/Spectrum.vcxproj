@@ -20,10 +20,15 @@
     <ClInclude Include="src\Spectrum_core\Application.h" />
     <ClInclude Include="src\Spectrum_core\Core.h" />
     <ClInclude Include="src\Spectrum_core\EntryPoint.h" />
+    <ClInclude Include="src\sppch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Spectrum_core\Log.cpp" />
     <ClCompile Include="src\Spectrum_core\Application.cpp" />
+    <ClCompile Include="src\sppch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -75,6 +80,8 @@
       <PreprocessorDefinitions>SP_PLATFORM_WINDOWS;SP_BUILD_DLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)Spectrum\vendor\spdlog\include;$(SolutionDir)Spectrum\src\;</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>sppch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -90,6 +97,8 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)Spectrum\vendor\spdlog\include;$(SolutionDir)Spectrum\src\;</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>sppch.h</PrecompiledHeaderFile>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

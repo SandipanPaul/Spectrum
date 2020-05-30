@@ -2,7 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
 
 namespace Spectrum{
 	class SPECTRUM_API WinddowResizeEvent : public Event

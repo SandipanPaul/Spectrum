@@ -2,8 +2,6 @@
 
 #include "Spectrum_core/Core.h"
 
-#include <string>
-#include<functional>
 
 namespace Spectrum {
 	enum class EventType

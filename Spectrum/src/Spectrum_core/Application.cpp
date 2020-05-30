@@ -1,3 +1,4 @@
+#include "sppch.h"
 #include "Application.h"
 #include "Spectrum_core/Events/ApplicationEvent.h"
 #include "Log.h"

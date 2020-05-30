@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Event.h"
-#include <sstream>
 
 namespace Spectrum {
 	class SPECTRUM_API MouseMovedEvent :public Event {
