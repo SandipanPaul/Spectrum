@@ -11,6 +11,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Spectrum_core\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Spectrum_core\Events\Event.h" />
+    <ClInclude Include="src\Spectrum_core\Events\KeyEvent.h" />
+    <ClInclude Include="src\Spectrum_core\Events\MouseEvent.h" />
     <ClInclude Include="src\Spectrum_core\Log.h" />
     <ClInclude Include="src\Spectrum.h" />
     <ClInclude Include="src\Spectrum_core\Application.h" />
@@ -70,7 +74,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>SP_PLATFORM_WINDOWS;SP_BUILD_DLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Spectrum\vendor\spdlog\include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Spectrum\vendor\spdlog\include;$(SolutionDir)Spectrum\src\;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -85,7 +89,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Spectrum\vendor\spdlog\include;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Spectrum\vendor\spdlog\include;$(SolutionDir)Spectrum\src\;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
