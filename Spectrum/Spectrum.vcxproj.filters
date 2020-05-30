@@ -1,60 +1,48 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="Spectrum_core">
+      <UniqueIdentifier>{E04031F2-4C01-AD28-153C-F6A581BBF104}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Spectrum_core\Events">
+      <UniqueIdentifier>{C430596B-B0BF-E234-59DE-F62F454CF3DA}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Spectrum_core\Core.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ClInclude Include="src\Spectrum.h" />
     <ClInclude Include="src\Spectrum_core\Application.h">
-      <Filter>Header Files</Filter>
+      <Filter>Spectrum_core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Spectrum.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\Spectrum_core\Core.h">
+      <Filter>Spectrum_core</Filter>
     </ClInclude>
     <ClInclude Include="src\Spectrum_core\EntryPoint.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Spectrum_core\Log.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Spectrum_core\Events\Event.h">
-      <Filter>Header Files</Filter>
+      <Filter>Spectrum_core</Filter>
     </ClInclude>
     <ClInclude Include="src\Spectrum_core\Events\ApplicationEvent.h">
-      <Filter>Header Files</Filter>
+      <Filter>Spectrum_core\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Spectrum_core\Events\Event.h">
+      <Filter>Spectrum_core\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Spectrum_core\Events\KeyEvent.h">
-      <Filter>Header Files</Filter>
+      <Filter>Spectrum_core\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Spectrum_core\Events\MouseEvent.h">
-      <Filter>Header Files</Filter>
+      <Filter>Spectrum_core\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\sppch.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\Spectrum_core\Log.h">
+      <Filter>Spectrum_core</Filter>
     </ClInclude>
+    <ClInclude Include="src\sppch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Spectrum_core\Application.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Spectrum_core</Filter>
     </ClCompile>
     <ClCompile Include="src\Spectrum_core\Log.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Spectrum_core</Filter>
     </ClCompile>
-    <ClCompile Include="src\sppch.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <ClCompile Include="src\sppch.cpp" />
   </ItemGroup>
 </Project>
