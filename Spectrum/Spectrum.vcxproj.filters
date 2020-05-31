@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Spectrum_core">
       <UniqueIdentifier>{E04031F2-4C01-AD28-153C-F6A581BBF104}</UniqueIdentifier>
     </Filter>
@@ -9,6 +15,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\Spectrum.h" />
     <ClInclude Include="src\Spectrum_core\Application.h">
       <Filter>Spectrum_core</Filter>
@@ -34,9 +43,15 @@
     <ClInclude Include="src\Spectrum_core\Log.h">
       <Filter>Spectrum_core</Filter>
     </ClInclude>
+    <ClInclude Include="src\Spectrum_core\Window.h">
+      <Filter>Spectrum_core</Filter>
+    </ClInclude>
     <ClInclude Include="src\sppch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\Spectrum_core\Application.cpp">
       <Filter>Spectrum_core</Filter>
     </ClCompile>

@@ -2,3 +2,6 @@
 	path = Spectrum/vendor/spdlog
 	url = https://github.com/gabime/spdlog
 
+[submodule "Spectrum/vendor/GLFW"]
+	path = Spectrum/vendor/GLFW
+	url = https://github.com/TheCherno/GLFW

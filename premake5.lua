@@ -16,7 +16,7 @@ outputdir = "%{cfg.buildcfg}-x64"
 IncludeDir ={}
 IncludeDir["GLFW"]="Spectrum/vendor/GLFW/include"
 
-include= "Spectrum/vendor/GLFW"
+include "Spectrum/vendor/GLFW"
 
 
 project "Spectrum"
@@ -51,7 +51,7 @@ project "Spectrum"
 	}
 
 	filter "system:windows"
-		systemversion "latest"
+		systemversion "10.0.18362.0"
 
 		defines
 		{
@@ -111,7 +111,7 @@ project "Sandbox"
 	}
 
 	filter "system:windows"
-		systemversion "latest"
+		systemversion "10.0.18362.0"
 		
 	filter "configurations:Debug"
 		defines "SP_DEBUG"

@@ -6,6 +6,7 @@ namespace Spectrum {
 
 	Application::Application()
 	{
+		m_window = std::unique_ptr<Window>(Window::Create());
 	}
 
 	Application::~Application()
@@ -13,8 +14,9 @@ namespace Spectrum {
 	}
 
 	void Application::Run() {
-		WinddowResizeEvent e(1280, 720);
-		SP_TRACE(e);
-		while (true);
+		
+		while (m_Running) {
+			m_window->OnUpdate();
+		}
 	}
 }

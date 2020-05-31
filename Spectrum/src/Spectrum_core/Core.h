@@ -10,4 +10,11 @@
 #error Windows support for now!
 #endif
 
+#ifdef SP_ENABLE_ASSERTS
+	#define SP_ASSERT(x, ...){if(!(x)){ SP_ERROR("Assertion failed: {0}",__VA__ARGS__);__debugbreak();}}
+	#define SP_CORE_ASSERT(x, ...){if(!(x)){ SP_CORE_ERROR("Assertion failed: {0}",__VA__ARGS__);__debugbreak();}})
+#else
+	#define SP_ASSERT(x,...)
+	#define SP_CORE_ASSERT(x,...)
+#endif
 #define BIT(x) (1<<x)
