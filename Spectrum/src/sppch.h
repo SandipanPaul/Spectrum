@@ -10,6 +10,7 @@
 #include <unordered_map>
 #include <unordered_set>
 #include <sstream>
+#include "Spectrum_core/Log.h"
 
 
 #ifdef SP_PLATFORM_WINDOWS

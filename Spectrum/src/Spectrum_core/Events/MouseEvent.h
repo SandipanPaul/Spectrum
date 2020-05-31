@@ -37,8 +37,8 @@ namespace Spectrum {
 			return ss.str();
 		}
 
-		EVENT_CLASS_TYPE(MouseMoved)
-			EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
+		EVENT_CLASS_TYPE(MouseScrolled)
+		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
 	private:
 		float m_XOffset, m_YOffset;
 	};
@@ -67,7 +67,7 @@ namespace Spectrum {
 			return ss.str();
 		}
 
-		EVENT_CLASS_TYPE(MouseButtonEvent)
+		EVENT_CLASS_TYPE(MouseButtonPressed)
 	};
 
 	class SPECTRUM_API MouseButtonReleasedEvent :public MouseButtonEvent {
@@ -82,6 +82,6 @@ namespace Spectrum {
 			return ss.str();
 		}
 
-		EVENT_CLASS_TYPE(MouseButtonEvent)
+		EVENT_CLASS_TYPE(MouseButtonReleased)
 	};	
 }

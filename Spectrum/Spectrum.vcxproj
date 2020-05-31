@@ -15,7 +15,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{564B8621-504C-4AE3-9969-4F34E76C57F2}</ProjectGuid>
+    <ProjectGuid>{38F55FB5-24C2-BAC0-4DDB-A8683907F04E}</ProjectGuid>
     <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Spectrum</RootNamespace>

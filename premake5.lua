@@ -1,4 +1,4 @@
-workspace "Spectrum "
+workspace "Spectrum"
 	architecture "x64"
 	startproject "Sandbox"
 
