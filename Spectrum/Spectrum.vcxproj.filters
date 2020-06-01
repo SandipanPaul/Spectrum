@@ -40,6 +40,12 @@
     <ClInclude Include="src\Spectrum_core\Events\MouseEvent.h">
       <Filter>Spectrum_core\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Spectrum_core\Layer.h">
+      <Filter>Spectrum_core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Spectrum_core\LayerStack.h">
+      <Filter>Spectrum_core</Filter>
+    </ClInclude>
     <ClInclude Include="src\Spectrum_core\Log.h">
       <Filter>Spectrum_core</Filter>
     </ClInclude>
@@ -53,6 +59,12 @@
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Spectrum_core\Application.cpp">
+      <Filter>Spectrum_core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Spectrum_core\Layer.cpp">
+      <Filter>Spectrum_core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Spectrum_core\LayerStack.cpp">
       <Filter>Spectrum_core</Filter>
     </ClCompile>
     <ClCompile Include="src\Spectrum_core\Log.cpp">

@@ -3,6 +3,7 @@
 //FOR use by client application
 
 #include "Spectrum_core/Application.h"
+#include "Spectrum_core/Layer.h"
 #include "Spectrum_core/Log.h"
 
 //-------------Entry Point----------------------//
