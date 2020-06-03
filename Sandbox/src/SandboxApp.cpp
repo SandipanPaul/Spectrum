@@ -12,6 +12,9 @@ public:
 
 	void OnUpdate() override {
 		SP_INFO("ExmapleLayer::Update");
+
+		if (Spectrum::Input::isKeyPressed(SP_KEY_TAB))
+			SP_INFO("TAB is pressed");
 	}
 
 	void OnEvent(Spectrum::Event& event) override {

@@ -22,11 +22,12 @@ include "Spectrum/vendor/GLFW"
 include "Spectrum/vendor/Glad"
 include "Spectrum/vendor/imgui"
 
+startproject "Sandbox"
 
 project "Spectrum"
 	location "Spectrum"
 	kind "SharedLib"
-	language "C++"
+	language "C++17"
 
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
@@ -70,31 +71,28 @@ project "Spectrum"
 		
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" ..outputdir .."/Sandbox")
+			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" ..outputdir .."/Sandbox/\"")
 		}
 
 	filter "configurations:Debug"
 		defines "SP_DEBUG"
-		buildoptions "/MDd"
 		runtime "Debug"
 		symbols "on"
 
 	filter "configurations:Release"
 		defines "SP_RELEASE"
-		buildoptions "/MD"
 		runtime "Release"
 		optimize "on"
 
 	filter "configurations:Dist"
 		defines "SP_DIST"
-		buildoptions "/MD"
 		runtime "Release"
 		optimize "on"
 
 project "Sandbox"
 	location "Sandbox"
 	kind "ConsoleApp"
-	language "C++"
+	language "C++17"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -127,18 +125,15 @@ project "Sandbox"
 		
 	filter "configurations:Debug"
 		defines "SP_DEBUG"
-		buildoptions "/MDd"
 		runtime "Debug"
 		symbols "on"
 
 	filter "configurations:Release"
 		defines "SP_RELEASE"
-		buildoptions "/MD"
 		runtime "Release"
 		optimize "on"
 
 	filter "configurations:Dist"
 		defines "SP_DIST"
-		buildoptions "/MD"
 		runtime "Release"
 		optimize "on"

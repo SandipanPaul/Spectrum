@@ -35,7 +35,7 @@ namespace Spectrum {
 		SP_CORE_INFO("Creating Window {0} ({1}, {2})", props.Title, props.Width, props.Height);
 		if (!s_GLFWInitialized) {
 			int success = glfwInit();
-			SP_CORE_ASSERT(success, "Could not Initialize GLFW");
+			SP_CORE_ASSERT(success, "Could not Initialize GLFW")
 			glfwSetErrorCallback(GLFWErrorCallback);
 			s_GLFWInitialized = true;
 		}
@@ -43,7 +43,7 @@ namespace Spectrum {
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
-		SP_CORE_ASSERT(status, "Failed to inilialize GLAD");
+		SP_CORE_ASSERT(status, "Failed to inilialize GLAD")
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 

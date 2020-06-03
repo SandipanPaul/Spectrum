@@ -85,6 +85,7 @@
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -150,6 +151,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Spectrum.h" />
     <ClInclude Include="src\Spectrum_core\Application.h" />
@@ -160,14 +162,18 @@
     <ClInclude Include="src\Spectrum_core\Events\KeyEvent.h" />
     <ClInclude Include="src\Spectrum_core\Events\MouseEvent.h" />
     <ClInclude Include="src\Spectrum_core\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Spectrum_core\Input.h" />
+    <ClInclude Include="src\Spectrum_core\KeyCodes.h" />
     <ClInclude Include="src\Spectrum_core\Layer.h" />
     <ClInclude Include="src\Spectrum_core\LayerStack.h" />
     <ClInclude Include="src\Spectrum_core\Log.h" />
+    <ClInclude Include="src\Spectrum_core\MouseButtonCodes.h" />
     <ClInclude Include="src\Spectrum_core\Window.h" />
     <ClInclude Include="src\sppch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\Spectrum_core\Application.cpp" />
     <ClCompile Include="src\Spectrum_core\ImGui\ImGuiLayer.cpp" />
