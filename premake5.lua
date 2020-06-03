@@ -17,17 +17,17 @@ IncludeDir ={}
 IncludeDir["GLFW"]="Spectrum/vendor/GLFW/include"
 IncludeDir["Glad"]="Spectrum/vendor/Glad/include"
 IncludeDir["ImGui"]="Spectrum/vendor/imgui"
+IncludeDir["glm"]="Spectrum/vendor/glm"
 
 include "Spectrum/vendor/GLFW"
 include "Spectrum/vendor/Glad"
 include "Spectrum/vendor/imgui"
 
-startproject "Sandbox"
 
 project "Spectrum"
 	location "Spectrum"
 	kind "SharedLib"
-	language "C++17"
+	cppdialect "C++17"
 
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
@@ -39,7 +39,9 @@ project "Spectrum"
 	files
 	{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/glm/glm/**.hpp",
+		"%{prj.name}/vendor/glm/glm/**.inl"
 	}
 
 	includedirs
@@ -48,7 +50,8 @@ project "Spectrum"
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
-		"%{IncludeDir.ImGui}"
+		"%{IncludeDir.ImGui}",
+		"%{IncludeDir.glm}"
 	}
 	
 	links
@@ -92,7 +95,7 @@ project "Spectrum"
 project "Sandbox"
 	location "Sandbox"
 	kind "ConsoleApp"
-	language "C++17"
+	cppdialect "C++17"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -108,6 +111,7 @@ project "Sandbox"
 		"Spectrum/vendor/spdlog/include",
 		"Spectrum/src",
 		"Spectrum/vendor",
+		"%{IncludeDir.glm}"
 	}
 	
 	defines

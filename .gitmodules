@@ -8,3 +8,6 @@
 [submodule "Spectrum/vendor/imgui"]
 	path = Spectrum/vendor/imgui
 	url = https://github.com/TheCherno/imgui
+[submodule "Spectrum\\vendor\\glm"]
+	path = Spectrum\\vendor\\glm
+	url = https://github.com/g-truc/glm
