@@ -52,7 +52,7 @@ namespace Spectrum {
 			WindowData& data=*(WindowData*)glfwGetWindowUserPointer(window);
 			data.Width = width;
 			data.Height = height;
-			WinddowResizeEvent event(width, height);
+			WindowResizeEvent event(width, height);
 			data.EventCallback(event);
 		});
 
@@ -85,6 +85,12 @@ namespace Spectrum {
 					break;
 				}
 			}
+		});
+
+		glfwSetCharCallback(m_Window, [](GLFWwindow* window, unsigned int character) {
+			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+			KeyTypedEvent event(character);
+			data.EventCallback(event);
 		});
 
 		glfwSetMouseButtonCallback(m_Window, [](GLFWwindow* window, int button, int action, int mods) {
