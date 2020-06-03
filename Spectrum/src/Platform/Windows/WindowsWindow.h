@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Spectrum_core/Window.h"
-#include "GLFW/glfw3.h"
+#include <GLFW/glfw3.h>
 
 namespace Spectrum {
 	class WindowsWindow : public Window

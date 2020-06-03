@@ -15,8 +15,12 @@ outputdir = "%{cfg.buildcfg}-x64"
 -- Include directories relative to root folder (solution directory)
 IncludeDir ={}
 IncludeDir["GLFW"]="Spectrum/vendor/GLFW/include"
+IncludeDir["Glad"]="Spectrum/vendor/Glad/include"
+IncludeDir["ImGui"]="Spectrum/vendor/imgui"
 
 include "Spectrum/vendor/GLFW"
+include "Spectrum/vendor/Glad"
+include "Spectrum/vendor/imgui"
 
 
 project "Spectrum"
@@ -41,12 +45,16 @@ project "Spectrum"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}"
 	}
 	
 	links
 	{
 		"GLFW",
+		"Glad",
+		"ImGui",
 		"opengl32.lib"
 	}
 
@@ -56,7 +64,8 @@ project "Spectrum"
 		defines
 		{
 			"SP_PLATFORM_WINDOWS",
-			"SP_BUILD_DLL"
+			"SP_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 		
 		postbuildcommands

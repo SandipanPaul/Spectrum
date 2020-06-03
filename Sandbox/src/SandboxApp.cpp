@@ -23,6 +23,7 @@ class Sandbox : public Spectrum::Application {
 public:
 	Sandbox() {
 		PushLayer(new ExampleLayer());
+		PushOverlay(new Spectrum::ImGuiLayer());
 	}
 	~Sandbox() {
 

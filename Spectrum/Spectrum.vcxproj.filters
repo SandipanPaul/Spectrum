@@ -4,6 +4,9 @@
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Platform\Windows">
       <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
     </Filter>
@@ -13,8 +16,14 @@
     <Filter Include="Spectrum_core\Events">
       <UniqueIdentifier>{C430596B-B0BF-E234-59DE-F62F454CF3DA}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Spectrum_core\ImGui">
+      <UniqueIdentifier>{0ADE1E70-763F-FC7D-FFAC-42306B0D333D}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>Platform\Windows</Filter>
     </ClInclude>
@@ -40,6 +49,9 @@
     <ClInclude Include="src\Spectrum_core\Events\MouseEvent.h">
       <Filter>Spectrum_core\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Spectrum_core\ImGui\ImGuiLayer.h">
+      <Filter>Spectrum_core\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\Spectrum_core\Layer.h">
       <Filter>Spectrum_core</Filter>
     </ClInclude>
@@ -55,11 +67,17 @@
     <ClInclude Include="src\sppch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Spectrum_core\Application.cpp">
       <Filter>Spectrum_core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Spectrum_core\ImGui\ImGuiLayer.cpp">
+      <Filter>Spectrum_core\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\Spectrum_core\Layer.cpp">
       <Filter>Spectrum_core</Filter>

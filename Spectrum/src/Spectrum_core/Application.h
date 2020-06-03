@@ -20,11 +20,16 @@ namespace Spectrum {
 
 		void PushLayer(Layer* layer);
 		void PushOverlay(Layer* layer);
+
+		inline static Application& Get() { return *s_Instance; }
+		inline Window& GetWindow() { return *m_window; }
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
 		std::unique_ptr<Window> m_window;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
+	private:
+		static Application* s_Instance;
 	};
 	
 	//To be defined in client
