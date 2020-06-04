@@ -1,11 +1,15 @@
 #pragma once
 
 #ifdef SP_PLATFORM_WINDOWS
+#if	SP_DYNAMIC_LINK
 	#ifdef SP_BUILD_DLL
 		#define SPECTRUM_API __declspec(dllexport)
 	#else
 		#define SPECTRUM_API __declspec(dllimport)
 	#endif
+#else
+	#define SPECTRUM_API
+#endif
 #else
 #error Windows support for now!
 #endif

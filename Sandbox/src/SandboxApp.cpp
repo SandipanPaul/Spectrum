@@ -20,7 +20,7 @@ public:
 
 	virtual void OnImGuiRender() override {
 		ImGui::Begin("test");
-		ImGui:TEXT("Hello world");
+		TEXT("Hello world");
 		ImGui::End();
 	}
 

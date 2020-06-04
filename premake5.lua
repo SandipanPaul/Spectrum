@@ -26,8 +26,10 @@ include "Spectrum/vendor/imgui"
 
 project "Spectrum"
 	location "Spectrum"
-	kind "SharedLib"
+	kind "StaticLib"
+	language "C++"
 	cppdialect "C++17"
+	staticruntime "on"
 
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
@@ -42,6 +44,11 @@ project "Spectrum"
 		"%{prj.name}/src/**.cpp",
 		"%{prj.name}/vendor/glm/glm/**.hpp",
 		"%{prj.name}/vendor/glm/glm/**.inl"
+	}
+
+	defines
+	{
+		"_CRT_SECURE_NO_WARNINGS"
 	}
 
 	includedirs
@@ -71,11 +78,6 @@ project "Spectrum"
 			"SP_BUILD_DLL",
 			"GLFW_INCLUDE_NONE"
 		}
-		
-		postbuildcommands
-		{
-			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" ..outputdir .."/Sandbox/\"")
-		}
 
 	filter "configurations:Debug"
 		defines "SP_DEBUG"
@@ -95,7 +97,10 @@ project "Spectrum"
 project "Sandbox"
 	location "Sandbox"
 	kind "ConsoleApp"
+	language "C++"
 	cppdialect "C++17"
+	staticruntime "on"
+
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -126,6 +131,11 @@ project "Sandbox"
 
 	filter "system:windows"
 		systemversion "10.0.18362.0"
+
+		defines
+		{
+			"SP_PLATFORM_WINDOWS"
+		}
 		
 	filter "configurations:Debug"
 		defines "SP_DEBUG"
