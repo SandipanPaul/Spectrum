@@ -5,6 +5,7 @@
 #include "Window.h"
 #include "Spectrum_core/LayerStack.h"
 #include "Spectrum_core/Events/ApplicationEvent.h"
+#include "Spectrum_core/ImGui/ImGuiLayer.h"
 
 
 namespace Spectrum {
@@ -26,6 +27,7 @@ namespace Spectrum {
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
 		std::unique_ptr<Window> m_window;
+		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 	private:

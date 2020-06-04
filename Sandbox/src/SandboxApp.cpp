@@ -1,5 +1,6 @@
 #include<sppch.h>
 #include<Spectrum.h>
+#include "imgui/imgui.h"
 
 class ExampleLayer : public Spectrum::Layer
 {
@@ -17,6 +18,12 @@ public:
 			SP_INFO("TAB is pressed");
 	}
 
+	virtual void OnImGuiRender() override {
+		ImGui::Begin("test");
+		ImGui:TEXT("Hello world");
+		ImGui::End();
+	}
+
 	void OnEvent(Spectrum::Event& event) override {
 		SP_TRACE("{0}", event);
 	}
@@ -26,7 +33,7 @@ class Sandbox : public Spectrum::Application {
 public:
 	Sandbox() {
 		PushLayer(new ExampleLayer());
-		PushOverlay(new Spectrum::ImGuiLayer());
+		//PushOverlay(new Spectrum::ImGuiLayer());
 	}
 	~Sandbox() {
 
